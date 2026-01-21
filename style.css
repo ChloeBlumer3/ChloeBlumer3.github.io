@@ -1,0 +1,53 @@
+/* General page styling */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #fff7fb;
+  color: #333;
+  max-width: 800px;
+  margin: 40px auto;
+  line-height: 1.7;
+}
+
+/* Headings */
+h1 {
+  color: #b04a7a;
+}
+
+h2 {
+  color: #c86b98;
+  border-bottom: 2px solid #f2c6d6;
+  padding-bottom: 5px;
+}
+
+/* Article list */
+ul.post-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul.post-list li {
+  background-color: #ffffff;
+  border-left: 5px solid #f2a7c2;
+  padding: 12px 16px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+/* Links */
+ul.post-list a {
+  text-decoration: none;
+  color: #b04a7a;
+  font-weight: bold;
+}
+
+ul.post-list a:hover {
+  text-decoration: underline;
+}
+
+/* Dates */
+.date {
+  display: block;
+  font-size: 0.9em;
+  color: #777;
+  margin-top: 4px;
+}
