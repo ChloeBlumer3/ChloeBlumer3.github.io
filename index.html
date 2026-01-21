@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"> 
+  <meta charset="UTF-8">
   <title>AI in Modern Vehicles</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -13,38 +13,40 @@
     <a href="about.html">About Me</a>
   </nav>
 
-  <!-- ✅ CARD CONTAINER (this is what was missing) -->
-  <main>
+  <div class="card homepage-card">
+
     <h1>AI in Modern Vehicles</h1>
-    <p class="author">By Chloe Blumer</p>
+    <p class="byline">By Chloe Blumer</p>
 
     <p>
-      This newsletter examines how artificial intelligence is being implemented in modern
-      vehicles, with attention to real-world applications, safety concerns, and differing
-      industry strategies in driver-assistance systems.
+      This newsletter examines how artificial intelligence is being implemented in modern vehicles,
+      with attention to real-world applications, safety concerns, and differing industry strategies
+      in driver-assistance systems.
     </p>
 
     <h2>Articles</h2>
 
-    <!-- ✅ CARD-STYLE ARTICLE LIST -->
-    <section class="post-list">
+    <!-- REQUIRED STRUCTURE FOR CLASS DASHBOARD -->
+    <ul class="post-list">
 
-      <article class="post-card">
-        <a href="tesla-advances-ai-first-driver-assistance.html">
-          <h3>Tesla Advances an AI-First Approach to Driver Assistance</h3>
-        </a>
-        <span class="date">January 15, 2026</span>
-      </article>
-
-      <article class="post-card">
-        <a href="gm-mercedes-controlled-use-case-ai.html">
-          <h3>GM and Mercedes Emphasize Controlled, Use-Case-Driven AI</h3>
+      <!-- Newest post FIRST -->
+      <li class="post-card">
+        <a href="gm-and-mercedes-emphasize-controlled-use-case-driven-ai.html">
+          GM and Mercedes Emphasize Controlled, Use-Case-Driven AI
         </a>
         <span class="date">January 18, 2026</span>
-      </article>
+      </li>
 
-    </section>
-  </main>
+      <li class="post-card">
+        <a href="tesla-advances-an-ai-first-approach-to-driver-assistance.html">
+          Tesla Advances an AI-First Approach to Driver Assistance
+        </a>
+        <span class="date">January 15, 2026</span>
+      </li>
+
+    </ul>
+
+  </div>
 
 </body>
 </html>
