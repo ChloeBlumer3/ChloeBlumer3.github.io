@@ -1,25 +1,22 @@
 /* ---------- GLOBAL ---------- */
 body {
-  font-family: "Arial", sans-serif;
-  line-height: 1.6;
+  font-family: "Segoe UI", sans-serif;
   margin: 0;
   padding: 0;
-
-  /* Pink dotted background */
-  background-color: #fff6fa;
-  background-image: radial-gradient(#f3a6c8 1.5px, transparent 1.5px);
+  background-color: #fff7fb;
+  background-image: radial-gradient(#f3a6c9 1.8px, transparent 1.8px);
   background-size: 26px 26px;
 }
 
 /* ---------- NAV ---------- */
 nav {
   text-align: right;
-  padding: 20px 40px;
-  border-bottom: 2px solid #f2b6cd;
+  padding: 16px 40px;
+  border-bottom: 2px solid #f3a6c9;
 }
 
 nav a {
-  color: #b04a7a;
+  color: #b14a7c;
   text-decoration: none;
   font-weight: 600;
   margin-left: 20px;
@@ -29,21 +26,90 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* ---------- CARD (UNIVERSAL) ---------- */
+/* ---------- CARD WRAPPER ---------- */
 .card {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 40px;
-  max-width: 900px;
+  background: white;
+  max-width: 800px;
   margin: 60px auto;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 /* ---------- HEADINGS ---------- */
 h1 {
-  color: #b04a7a;
-  margin-top: 0;
+  color: #b14a7c;
+  font-size: 2.4rem;
 }
 
 h2 {
-  c
+  margin-top: 40px;
+  color: #b14a7c;
+}
+
+h3 {
+  margin: 0 0 6px 0;
+  color: #b14a7c;
+}
+
+/* ---------- TEXT ---------- */
+.byline {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* ---------- POST LIST ---------- */
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* ---------- POST CARDS ---------- */
+.post-card {
+  margin-bottom: 18px;
+}
+
+.post-card a {
+  display: block;
+  padding: 22px 26px;
+  border-radius: 16px;
+  background: #fff;
+  border-left: 6px solid #f3a6c9;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.post-card a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+}
+
+/* ---------- ARTICLE PAGE CARD ---------- */
+.article-card {
+  background: white;
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* ---------- BACK LINK ---------- */
+.back-link {
+  display: inline-block;
+  margin-top: 30px;
+  color: #b14a7c;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
