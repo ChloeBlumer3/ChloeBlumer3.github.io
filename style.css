@@ -1,13 +1,16 @@
-/* Page background */
+/* 🌸 Dotted background */
 body {
   font-family: Arial, sans-serif;
-  background-color: #fff7fb;
   color: #333;
   margin: 0;
   padding: 0;
+
+  background-color: #fff7fb;
+  background-image: radial-gradient(#f2c6d6 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
-/* Navigation */
+/* Navigation bar */
 nav {
   text-align: center;
   padding: 20px 0;
@@ -28,12 +31,12 @@ nav a:hover {
 
 /* Main content card */
 main {
-  max-width: 800px;
+  max-width: 850px;
   background-color: #ffffff;
   margin: 40px auto;
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   line-height: 1.7;
 }
 
@@ -41,48 +44,61 @@ main {
 h1 {
   color: #b04a7a;
   border-bottom: 3px solid #f2c6d6;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
 }
 
 h2 {
   color: #c86b98;
-  margin-top: 30px;
+  margin-top: 35px;
 }
 
-/* Post list */
-ul.post-list {
-  list-style-type: none;
-  padding-left: 0;
+h3 {
+  margin: 0;
+  color: #b04a7a;
 }
 
-ul.post-list li {
+/* Author name */
+.author {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Article list layout */
+.post-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+  margin-top: 25px;
+}
+
+/* Article cards */
+.post-card {
   background-color: #ffffff;
+  border-radius: 14px;
+  padding: 22px 26px;
   border-left: 6px solid #f2a7c2;
-  padding: 14px 18px;
-  margin-bottom: 18px;
-  border-radius: 8px;
-  transition: background-color 0.2s ease-in-out;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-ul.post-list li:hover {
-  background-color: #fff0f6;
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
 }
 
 /* Links */
-ul.post-list a {
-  color: #b04a7a;
-  font-weight: bold;
+.post-card a {
   text-decoration: none;
 }
 
-ul.post-list a:hover {
+.post-card a:hover h3 {
   text-decoration: underline;
 }
 
 /* Dates */
 .date {
   display: block;
+  margin-top: 10px;
   font-size: 0.9em;
   color: #777;
-  margin-top: 6px;
 }
