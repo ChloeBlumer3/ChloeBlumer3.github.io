@@ -1,111 +1,140 @@
-/* ---------- GLOBAL ---------- */
+/* ====== BASE RESET ====== */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Segoe UI", sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #fff7fb;
-  background-image: radial-gradient(#f3a6c9 1.8px, transparent 1.8px);
-  background-size: 26px 26px;
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: #333;
+  background-color: #fff5fa;
+
+  /* pink polka dots */
+  background-image: radial-gradient(#f6a5c0 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
 }
 
-/* ---------- NAV ---------- */
-nav {
-  text-align: right;
-  padding: 16px 40px;
-  border-bottom: 2px solid #f3a6c9;
+/* ====== NAV ====== */
+.top-nav {
+  text-align: center;
+  padding: 16px 0;
+  border-bottom: 2px solid #f1a7c2;
+  margin-bottom: 40px;
 }
 
-nav a {
-  color: #b14a7c;
+.top-nav a {
+  color: #b04a75;
   text-decoration: none;
   font-weight: 600;
-  margin-left: 20px;
+  margin: 0 10px;
 }
 
-nav a:hover {
+.top-nav a:hover {
   text-decoration: underline;
 }
 
-/* ---------- CARD WRAPPER ---------- */
-.card {
-  background: white;
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+/* ====== MAIN NOTEBOOK CARD ====== */
+.notebook {
+  max-width: 900px;
+  margin: 0 auto 80px;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 60px 60px 50px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* ---------- HEADINGS ---------- */
-h1 {
-  color: #b14a7c;
-  font-size: 2.4rem;
+/* ====== TITLE + NAME (WHITE TEXT) ====== */
+header h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #ffffff;
 }
 
-h2 {
-  margin-top: 40px;
-  color: #b14a7c;
-}
-
-h3 {
-  margin: 0 0 6px 0;
-  color: #b14a7c;
-}
-
-/* ---------- TEXT ---------- */
 .byline {
+  text-align: center;
   font-weight: 600;
-  margin-bottom: 20px;
+  color: #ffffff;
+  margin-bottom: 35px;
 }
 
-.date {
-  color: #666;
-  font-size: 0.9rem;
+/* pink banner behind title */
+header {
+  background: linear-gradient(135deg, #c05486, #e28fb0);
+  padding: 50px 30px 40px;
+  border-radius: 18px;
+  margin-bottom: 45px;
 }
 
-/* ---------- POST LIST ---------- */
+/* ====== INTRO ====== */
+.intro {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 50px;
+}
+
+/* ====== ARTICLES ====== */
+.articles h2 {
+  font-size: 1.8rem;
+  color: #b04a75;
+  margin-bottom: 25px;
+}
+
+/* remove default list look */
 .post-list {
   list-style: none;
   padding: 0;
-  margin-top: 20px;
+  margin: 0;
 }
 
-/* ---------- POST CARDS ---------- */
+/* ====== ARTICLE CARDS ====== */
+.post-list li {
+  margin-bottom: 22px;
+}
+
 .post-card {
-  margin-bottom: 18px;
-}
-
-.post-card a {
   display: block;
+  background: #ffffff;
   padding: 22px 26px;
   border-radius: 16px;
-  background: #fff;
-  border-left: 6px solid #f3a6c9;
   text-decoration: none;
-  transition: all 0.25s ease;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  border-left: 6px solid #f3a0be;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.post-card a:hover {
+.post-card h3 {
+  margin: 0 0 6px;
+  color: #b04a75;
+  font-size: 1.15rem;
+}
+
+.post-card .date {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+/* hover animation */
+.post-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.12);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
 }
 
-/* ---------- ARTICLE PAGE CARD ---------- */
+/* ====== ARTICLE PAGE CARD ====== */
 .article-card {
-  background: white;
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  max-width: 900px;
+  margin: 0 auto 80px;
+  background: #ffffff;
+  padding: 60px;
+  border-radius: 22px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* ---------- BACK LINK ---------- */
+/* ====== BACK LINK ====== */
 .back-link {
   display: inline-block;
   margin-top: 30px;
-  color: #b14a7c;
+  color: #b04a75;
   font-weight: 600;
   text-decoration: none;
 }
