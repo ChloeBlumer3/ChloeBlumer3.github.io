@@ -1,34 +1,49 @@
-/* 🌸 Background with visible dots */
+/* ---------- GLOBAL ---------- */
 body {
-  font-family: Arial, sans-serif;
-  color: #333;
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
 
-  background-color: #fff7fb;
-  background-image: radial-gradient(#f2c6d6 2px, transparent 2px);
-  background-size: 22px 22px;
+  /* Pink dotted background */
+  background-color: #fff6fa;
+  background-image: radial-gradient(#f3a6c8 1.5px, transparent 1.5px);
+  background-size: 26px 26px;
 }
 
-/* Navigation bar */
+/* ---------- NAV ---------- */
 nav {
-  text-align: center;
-  padding: 20px 0;
-  background-color: #ffffff;
-  border-bottom: 2px solid #f2c6d6;
+  text-align: right;
+  padding: 20px 40px;
+  border-bottom: 2px solid #f2b6cd;
 }
 
 nav a {
   color: #b04a7a;
-  font-weight: bold;
   text-decoration: none;
-  margin: 0 15px;
+  font-weight: 600;
+  margin-left: 20px;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
-/* Main content card */
-main {
-  max-wid
+/* ---------- CARD (UNIVERSAL) ---------- */
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 900px;
+  margin: 60px auto;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- HEADINGS ---------- */
+h1 {
+  color: #b04a7a;
+  margin-top: 0;
+}
+
+h2 {
+  c
