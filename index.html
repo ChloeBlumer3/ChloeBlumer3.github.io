@@ -8,39 +8,54 @@
 
 <body>
 
-  <!-- Top Navigation -->
-  <nav>
+  <!-- Top navigation -->
+  <nav class="top-nav">
     <a href="index.html">Home</a>
+    <span>|</span>
     <a href="about.html">About Me</a>
   </nav>
 
-  <!-- Main notebook-style card -->
-  <main class="card">
+  <!-- Main notebook card -->
+  <main class="notebook">
 
-    <!-- Centered cover header -->
-    <header style="text-align: center;">
+    <!-- Centered cover section -->
+    <header class="cover">
       <h1>AI in Modern Vehicles</h1>
       <p class="byline">By Chloe Blumer</p>
     </header>
 
-    <p style="margin-top: 20px;">
+    <p class="intro">
       This newsletter examines how artificial intelligence is being implemented in modern vehicles,
       with attention to real-world applications, safety concerns, and differing industry strategies
       in driver-assistance systems.
     </p>
 
-    <h2>Articles</h2>
+    <section class="articles">
+      <h2>Articles</h2>
 
-    <!-- REQUIRED post list (structure unchanged) -->
-    <ul class="post-list">
+      <!-- REQUIRED structure for dashboard -->
+      <ul class="post-list">
 
-      <li class="post-card">
-        <a href="gm-and-mercedes-emphasize-controlled-use-case-driven-ai.html">
-          <h3>GM and Mercedes Emphasize Controlled, Use-Case-Driven AI</h3>
-          <span class="date">January 18, 2026</span>
-        </a>
-      </li>
+        <!-- GM Article -->
+        <li class="post-card">
+          <a href="gm-mercedes-controlled-use-case-ai.html">
+            <h3>GM and Mercedes Emphasize Controlled, Use-Case-Driven AI</h3>
+            <span class="date">January 18, 2026</span>
+          </a>
+        </li>
 
-      <li class="post-card">
-        <a href="tesla-advances-an-ai-first-approach-to-driver-assistance.html">
-          <h3>Tesla Advances an A
+        <!-- Tesla Article -->
+        <li class="post-card">
+          <a href="tesla-advances-ai-first-driver-assistance.html">
+            <h3>Tesla Advances an AI-First Approach to Driver Assistance</h3>
+            <span class="date">January 15, 2026</span>
+          </a>
+        </li>
+
+      </ul>
+    </section>
+
+  </main>
+
+</body>
+</html>
