@@ -238,39 +238,36 @@ header h1 {
 }
 
 /* ============================= */
-/* 🐱 Walking Cat (HOME PAGE) */
+/* 🐱 Walking Cat — Homepage */
 /* ============================= */
 
 .cat-container {
   position: relative;
   width: 100%;
-  height: 80px;
+  height: 70px;
   margin-top: 10px;
-  margin-bottom: -20px;
+  margin-bottom: -10px;
   overflow: hidden;
 }
 
-/* CAT IMAGE */
-.cat-walker img {
+/* CAT */
+.walking-cat {
   position: absolute;
-  bottom: 4px;              /* sits on the white card */
-  width: 110px;             /* slightly larger cat */
+  bottom: 0;               /* ON the white card edge */
   left: 0;
-
+  width: 120px;            /* slightly bigger */
   animation:
-    cat-walk 24s linear infinite,
-    cat-bob 0.8s ease-in-out infinite;
-
-  transform-origin: center;
+    walk-horizontal 26s linear infinite,
+    walk-bob 0.8s ease-in-out infinite;
 }
 
 /* SHADOW */
-.cat-walker::after {
+.walking-cat::after {
   content: "";
   position: absolute;
   bottom: -6px;
   left: 50%;
-  width: 50px;
+  width: 55px;
   height: 12px;
   background: rgba(0, 0, 0, 0.12);
   border-radius: 50%;
@@ -279,15 +276,15 @@ header h1 {
   animation: shadow-bob 0.8s ease-in-out infinite;
 }
 
-/* LEFT ↔ RIGHT WALK */
-@keyframes cat-walk {
+/* WALK LEFT ↔ RIGHT (NO SPIN) */
+@keyframes walk-horizontal {
   0% {
     left: 0;
     transform: scaleX(1);
   }
 
   45% {
-    left: calc(100% - 110px);
+    left: calc(100% - 120px);
     transform: scaleX(1);
   }
 
@@ -301,17 +298,17 @@ header h1 {
   }
 
   100% {
-    transform: scaleX(1); /* reset */
+    transform: scaleX(1);
   }
 }
 
-/* WALKING BOB */
-@keyframes cat-bob {
+/* SUBTLE WALK BOB */
+@keyframes walk-bob {
   0%, 100% {
-    transform: translateY(0) scaleX(var(--dir, 1));
+    transform: translateY(0);
   }
   50% {
-    transform: translateY(-4px) scaleX(var(--dir, 1));
+    transform: translateY(-4px);
   }
 }
 
@@ -326,4 +323,3 @@ header h1 {
     opacity: 0.08;
   }
 }
-
