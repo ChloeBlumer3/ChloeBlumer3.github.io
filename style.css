@@ -244,55 +244,33 @@ header h1 {
 .cat-container {
   position: relative;
   width: 100%;
-  height: 80px;
-  margin-top: 10px;
-  margin-bottom: -15px;
+  height: 70px;
+  margin-top: -20px;      /* pulls cat onto bottom of white card */
   overflow: hidden;
-}
-
-/* WALKER WRAPPER (handles shadow + motion) */
-.cat-walker {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  animation: walk-horizontal 26s linear infinite;
 }
 
 /* CAT IMAGE */
 .walking-cat {
-  width: 120px;
-  animation: walk-bob 0.8s ease-in-out infinite;
-}
-
-/* SHADOW */
-.cat-walker::after {
-  content: "";
   position: absolute;
-  bottom: -6px;
-  left: 50%;
-  width: 55px;
-  height: 12px;
-  background: rgba(0, 0, 0, 0.12);
-  border-radius: 50%;
-  transform: translateX(-50%);
-  filter: blur(4px);
-  animation: shadow-bob 0.8s ease-in-out infinite;
+  bottom: 0;              /* sits ON the white card edge */
+  width: 130px;           /* slightly bigger */
+  animation: cat-walk 24s linear infinite;
 }
 
-/* LEFT ↔ RIGHT WALK */
-@keyframes walk-horizontal {
+/* WALK LEFT → RIGHT → LEFT */
+@keyframes cat-walk {
   0% {
     left: 0;
     transform: scaleX(1);
   }
 
   45% {
-    left: calc(100% - 120px);
+    left: calc(100% - 130px);
     transform: scaleX(1);
   }
 
   50% {
-    transform: scaleX(-1);
+    transform: scaleX(-1); /* turn around */
   }
 
   95% {
@@ -301,28 +279,6 @@ header h1 {
   }
 
   100% {
-    transform: scaleX(1);
-  }
-}
-
-/* WALK BOB */
-@keyframes walk-bob {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-4px);
-  }
-}
-
-/* SHADOW SYNC */
-@keyframes shadow-bob {
-  0%, 100% {
-    transform: translateX(-50%) scale(1);
-    opacity: 0.12;
-  }
-  50% {
-    transform: translateX(-50%) scale(0.85);
-    opacity: 0.08;
+    transform: scaleX(1);  /* reset */
   }
 }
