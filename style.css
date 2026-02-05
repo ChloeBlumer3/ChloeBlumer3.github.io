@@ -249,29 +249,32 @@ header h1 {
 .walking-cat {
   position: absolute;
   bottom: 0;
-  width: 70px;
-  left: -80px;
+  width: 90px;
+  left: 0;
   animation: catMove 22s linear infinite;
-  transform-origin: center;
 }
 
-/* movement only */
+/* Cat stays visible at BOTH edges */
 @keyframes catMove {
   0% {
-    left: -80px;
+    left: 0;
     transform: scaleX(1);
   }
-  49% {
+
+  45% {
     left: calc(100% - 70px);
     transform: scaleX(1);
   }
+
   50% {
     transform: scaleX(-1);
   }
-  99% {
-    left: -80px;
+
+  95% {
+    left: 0;
     transform: scaleX(-1);
   }
+
   100% {
     transform: scaleX(1);
   }
