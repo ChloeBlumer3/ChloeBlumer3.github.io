@@ -238,48 +238,48 @@ header h1 {
 }
 
 /* ============================= */
-/* 🐱 Walking Cat (HOME ONLY)    */
+/* 🐱 Walking Cat (HOME PAGE) */
 /* ============================= */
 
 .cat-container {
   position: relative;
   width: 100%;
-  height: 120px;
-  margin-top: 40px;
+  height: 80px;
+  margin-top: 10px;
+  margin-bottom: -20px;
   overflow: hidden;
 }
 
-/* Wrapper controls movement + flip */
-.cat-walker {
-  position: absolute;
-  bottom: 20px;
-  width: 110px; /* BIGGER CAT */
-  animation: cat-walk 22s linear infinite;
-}
-
-/* Cat image */
+/* CAT IMAGE */
 .cat-walker img {
-  width: 100%;
-  display: block;
-  animation: cat-bob 0.6s ease-in-out infinite;
+  position: absolute;
+  bottom: 4px;              /* sits on the white card */
+  width: 110px;             /* slightly larger cat */
+  left: 0;
+
+  animation:
+    cat-walk 24s linear infinite,
+    cat-bob 0.8s ease-in-out infinite;
+
+  transform-origin: center;
 }
 
-/* Shadow */
+/* SHADOW */
 .cat-walker::after {
   content: "";
   position: absolute;
-  bottom: -8px;
+  bottom: -6px;
   left: 50%;
-  width: 55px;
+  width: 50px;
   height: 12px;
-  background: rgba(0, 0, 0, 0.18);
+  background: rgba(0, 0, 0, 0.12);
   border-radius: 50%;
   transform: translateX(-50%);
   filter: blur(4px);
-  animation: shadow-bob 0.6s ease-in-out infinite;
+  animation: shadow-bob 0.8s ease-in-out infinite;
 }
 
-/* LEFT ↔ RIGHT WALK + TURN */
+/* LEFT ↔ RIGHT WALK */
 @keyframes cat-walk {
   0% {
     left: 0;
@@ -292,8 +292,7 @@ header h1 {
   }
 
   50% {
-    left: calc(100% - 110px);
-    transform: scaleX(-1);
+    transform: scaleX(-1); /* turn */
   }
 
   95% {
@@ -302,29 +301,29 @@ header h1 {
   }
 
   100% {
-    left: 0;
-    transform: scaleX(1);
+    transform: scaleX(1); /* reset */
   }
 }
 
-/* Walking bounce */
+/* WALKING BOB */
 @keyframes cat-bob {
   0%, 100% {
-    transform: translateY(0);
+    transform: translateY(0) scaleX(var(--dir, 1));
   }
   50% {
-    transform: translateY(-4px);
+    transform: translateY(-4px) scaleX(var(--dir, 1));
   }
 }
 
-/* Shadow sync */
+/* SHADOW SYNC */
 @keyframes shadow-bob {
   0%, 100% {
     transform: translateX(-50%) scale(1);
-    opacity: 0.18;
+    opacity: 0.12;
   }
   50% {
     transform: translateX(-50%) scale(0.85);
-    opacity: 0.1;
+    opacity: 0.08;
   }
 }
+
