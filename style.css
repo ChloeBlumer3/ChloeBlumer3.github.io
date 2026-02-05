@@ -248,7 +248,7 @@ header h1 {
 
   /* THIS is the magic */
   margin-top: 0;
-  margin-bottom: -60px; /* cancels notebook bottom padding */
+  margin-bottom: -70px; /* cancels notebook bottom padding */
 
   overflow: hidden;
 }
