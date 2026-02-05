@@ -186,3 +186,8 @@ header {
   color: #666;
   margin-bottom: 30px;
 }
+.post-list > .post-card {
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
