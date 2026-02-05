@@ -43,7 +43,14 @@ body {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* ====== TITLE + NAME (WHITE TEXT) ====== */
+/* ====== TITLE + NAME ====== */
+header {
+  background: linear-gradient(135deg, #c05486, #e28fb0);
+  padding: 50px 30px 40px;
+  border-radius: 18px;
+  margin-bottom: 45px;
+}
+
 header h1 {
   text-align: center;
   font-size: 3rem;
@@ -55,15 +62,7 @@ header h1 {
   text-align: center;
   font-weight: 600;
   color: #ffffff;
-  margin-bottom: 35px;
-}
-
-/* pink banner behind title */
-header {
-  background: linear-gradient(135deg, #c05486, #e28fb0);
-  padding: 50px 30px 40px;
-  border-radius: 18px;
-  margin-bottom: 45px;
+  margin-bottom: 0;
 }
 
 /* ====== INTRO ====== */
@@ -87,19 +86,27 @@ header {
   margin: 0;
 }
 
-/* ====== ARTICLE CARDS ====== */
+/* ====== ARTICLE LIST ITEMS ====== */
 .post-list li {
   margin-bottom: 22px;
 }
 
+/* ====== ARTICLE CARDS ====== */
 .post-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   background: #ffffff;
   padding: 22px 26px;
   border-radius: 16px;
   text-decoration: none;
   border-left: 6px solid #f3a0be;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+
+  /* 🔑 FIX: forces identical height */
+  min-height: 110px;
+
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -143,7 +150,7 @@ header {
   text-decoration: underline;
 }
 
-/* === ARTICLE PAGE CARD FIX === */
+/* ====== ARTICLE CONTENT CARD ====== */
 .content-card {
   max-width: 800px;
   background: white;
@@ -153,14 +160,14 @@ header {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* === PAGE TITLE === */
+/* ====== PAGE TITLE ====== */
 .page-title {
   text-align: center;
   font-size: 2.2rem;
   margin-bottom: 25px;
 }
 
-/* === HEADER IMAGE === */
+/* ====== HEADER IMAGE ====== */
 .post-header-image {
   width: 100%;
   max-height: 360px;
@@ -170,7 +177,7 @@ header {
   display: block;
 }
 
-/* === INLINE IMAGE === */
+/* ====== INLINE IMAGE ====== */
 .inline-image {
   width: 100%;
   max-width: 600px;
@@ -179,15 +186,10 @@ header {
   border-radius: 12px;
 }
 
-/* === IMAGE CAPTION === */
+/* ====== IMAGE CAPTION ====== */
 .image-caption {
   text-align: center;
   font-size: 0.9rem;
   color: #666;
   margin-bottom: 30px;
 }
-.post-list > .post-card {
-  padding-top: 22px;
-  padding-bottom: 22px;
-}
-
