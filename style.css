@@ -252,7 +252,7 @@ header h1 {
 /* CAT IMAGE */
 .walking-cat {
   position: absolute;
-  bottom: -100;              /* sits ON the white card edge */
+  bottom: -10;              /* sits ON the white card edge */
   width: 130px;           /* slightly bigger */
   animation: cat-walk 24s linear infinite;
 }
