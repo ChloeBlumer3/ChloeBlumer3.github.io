@@ -236,3 +236,31 @@ header h1 {
   transform: translateY(-4px);
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
 }
+
+/* ===== Walking Cat Footer ===== */
+.cat-footer {
+  position: relative;
+  height: 120px;
+  margin-top: 80px;
+  overflow: hidden;
+}
+
+/* Cat image */
+.walking-cat {
+  position: absolute;
+  bottom: 0;
+  width: 90px;
+  animation: walk-across 10s linear infinite alternate;
+}
+
+/* Walking animation */
+@keyframes walk-across {
+  from {
+    left: 0;
+    transform: scaleX(1);
+  }
+  to {
+    left: calc(100% - 90px);
+    transform: scaleX(-1);
+  }
+}
