@@ -43,7 +43,7 @@ body {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* ====== NOTEBOOK LINKS (FIXED) ====== */
+/* ====== FIX: NOTEBOOK LINKS ====== */
 .notebook a {
   color: #b04a75;
   text-decoration: none;
@@ -97,6 +97,7 @@ header h1 {
   margin: 0;
 }
 
+/* ====== ARTICLE LIST ITEMS ====== */
 .post-list li {
   margin-bottom: 22px;
 }
@@ -106,13 +107,16 @@ header h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   height: 110px;
   padding: 22px 26px;
+
   background: #ffffff;
   border-radius: 16px;
   text-decoration: none;
   border-left: 6px solid #f3a0be;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -136,7 +140,10 @@ header h1 {
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
 }
 
-/* ====== WALKING CAT ====== */
+/* ============================= */
+/* 🐱 Walking Cat — Homepage */
+/* ============================= */
+
 .cat-container {
   position: relative;
   width: 100%;
@@ -146,29 +153,55 @@ header h1 {
   overflow: hidden;
 }
 
+/* CAT IMAGE */
 .walking-cat {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 130px;
+
   animation:
     cat-walk 24s linear infinite,
     cat-bob 0.6s ease-in-out infinite;
 }
 
+/* WALK LEFT → RIGHT → LEFT */
 @keyframes cat-walk {
-  0% { left: 0; transform: scaleX(1); }
-  45% { left: calc(100% - 130px); transform: scaleX(1); }
-  50% { transform: scaleX(-1); }
-  95% { left: 0; transform: scaleX(-1); }
-  100% { transform: scaleX(1); }
+  0% {
+    left: 0;
+    transform: scaleX(1);
+  }
+
+  45% {
+    left: calc(100% - 130px);
+    transform: scaleX(1);
+  }
+
+  50% {
+    transform: scaleX(-1);
+  }
+
+  95% {
+    left: 0;
+    transform: scaleX(-1);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
 }
 
+/* WALKING BOB */
 @keyframes cat-bob {
-  0%, 100% { translate: 0 0; }
-  50% { translate: 0 -3px; }
+  0%, 100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -3px;
+  }
 }
 
+/* SHADOW UNDER CAT */
 .cat-container::after {
   content: "";
   position: absolute;
@@ -179,17 +212,20 @@ header h1 {
   background: rgba(0, 0, 0, 0.12);
   border-radius: 50%;
   filter: blur(4px);
+
   animation:
     shadow-move 24s linear infinite,
     shadow-bob 0.6s ease-in-out infinite;
 }
 
+/* SHADOW FOLLOWS CAT */
 @keyframes shadow-move {
   0% { left: 0; }
   45% { left: calc(100% - 130px); }
   95% { left: 0; }
 }
 
+/* SHADOW SQUASH */
 @keyframes shadow-bob {
   0%, 100% {
     scale: 1;
