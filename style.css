@@ -43,6 +43,17 @@ body {
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
+/* ====== NOTEBOOK LINKS (FIXED) ====== */
+.notebook a {
+  color: #b04a75;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.notebook a:hover {
+  text-decoration: underline;
+}
+
 /* ====== TITLE + NAME ====== */
 header {
   background: linear-gradient(135deg, #c05486, #e28fb0);
@@ -86,7 +97,6 @@ header h1 {
   margin: 0;
 }
 
-/* ====== ARTICLE LIST ITEMS ====== */
 .post-list li {
   margin-bottom: 22px;
 }
@@ -96,125 +106,16 @@ header h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  background: #ffffff;
+  height: 110px;
   padding: 22px 26px;
-  border-radius: 16px;
-  text-decoration: none;
-  border-left: 6px solid #f3a0be;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-
-  /* 🔑 FIX: forces identical height */
-  min-height: 110px;
-
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.post-card h3 {
-  margin: 0 0 6px;
-  color: #b04a75;
-  font-size: 1.15rem;
-}
-
-.post-card .date {
-  color: #777;
-  font-size: 0.9rem;
-}
-
-/* hover animation */
-.post-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
-}
-
-/* ====== ARTICLE PAGE CARD ====== */
-.article-card {
-  max-width: 900px;
-  margin: 0 auto 80px;
-  background: #ffffff;
-  padding: 60px;
-  border-radius: 22px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-}
-
-/* ====== BACK LINK ====== */
-.back-link {
-  display: inline-block;
-  margin-top: 30px;
-  color: #b04a75;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.back-link:hover {
-  text-decoration: underline;
-}
-
-/* ====== ARTICLE CONTENT CARD ====== */
-.content-card {
-  max-width: 800px;
-  background: white;
-  margin: 40px auto;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-}
-
-/* ====== PAGE TITLE ====== */
-.page-title {
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 25px;
-}
-
-/* ====== HEADER IMAGE ====== */
-.post-header-image {
-  width: 100%;
-  max-height: 360px;
-  object-fit: cover;
-  border-radius: 15px;
-  margin: 25px 0;
-  display: block;
-}
-
-/* ====== INLINE IMAGE ====== */
-.inline-image {
-  width: 100%;
-  max-width: 600px;
-  margin: 30px auto 10px auto;
-  display: block;
-  border-radius: 12px;
-}
-
-/* ====== IMAGE CAPTION ====== */
-.image-caption {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #666;
-  margin-bottom: 30px;
-}
-/* ============================= */
-/* FIX: FORCE ALL ARTICLE CARDS TO SAME HEIGHT */
-/* ============================= */
-
-.post-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  height: 110px; /* exact same height for all cards */
-  padding: 22px 26px;
-
   background: #ffffff;
   border-radius: 16px;
   text-decoration: none;
   border-left: 6px solid #f3a0be;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
-
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Normalize ALL headings inside cards */
 .post-card h2,
 .post-card h3 {
   margin: 0 0 6px 0;
@@ -223,7 +124,6 @@ header h1 {
   color: #b04a75;
 }
 
-/* Normalize ALL date text */
 .post-card p,
 .post-card span {
   margin: 0;
@@ -231,78 +131,44 @@ header h1 {
   color: #777;
 }
 
-/* Hover effect stays consistent */
 .post-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.12);
 }
 
-/* ============================= */
-/* 🐱 Walking Cat — Homepage */
-/* ============================= */
-
+/* ====== WALKING CAT ====== */
 .cat-container {
   position: relative;
   width: 100%;
   height: 70px;
-
-  /* THIS is the magic */
   margin-top: 0;
-  margin-bottom: -80px; /* cancels notebook bottom padding */
-
+  margin-bottom: -80px;
   overflow: hidden;
 }
 
-
-/* CAT IMAGE */
 .walking-cat {
   position: absolute;
-  bottom: 0;             /* ON the white border */
+  bottom: 0;
   left: 0;
   width: 130px;
-
   animation:
     cat-walk 24s linear infinite,
     cat-bob 0.6s ease-in-out infinite;
 }
 
-/* WALK LEFT → RIGHT → LEFT (TURNING LIVES HERE ONLY) */
 @keyframes cat-walk {
-  0% {
-    left: 0;
-    transform: scaleX(1);
-  }
-
-  45% {
-    left: calc(100% - 130px);
-    transform: scaleX(1);
-  }
-
-  50% {
-    transform: scaleX(-1); /* turn */
-  }
-
-  95% {
-    left: 0;
-    transform: scaleX(-1);
-  }
-
-  100% {
-    transform: scaleX(1);
-  }
+  0% { left: 0; transform: scaleX(1); }
+  45% { left: calc(100% - 130px); transform: scaleX(1); }
+  50% { transform: scaleX(-1); }
+  95% { left: 0; transform: scaleX(-1); }
+  100% { transform: scaleX(1); }
 }
 
-/* WALKING BOB — NO SCALEX HERE */
 @keyframes cat-bob {
-  0%, 100% {
-    translate: 0 0;
-  }
-  50% {
-    translate: 0 -3px;
-  }
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -3px; }
 }
 
-/* SHADOW UNDER CAT */
 .cat-container::after {
   content: "";
   position: absolute;
@@ -313,20 +179,17 @@ header h1 {
   background: rgba(0, 0, 0, 0.12);
   border-radius: 50%;
   filter: blur(4px);
-
   animation:
     shadow-move 24s linear infinite,
     shadow-bob 0.6s ease-in-out infinite;
 }
 
-/* SHADOW FOLLOWS CAT */
 @keyframes shadow-move {
   0% { left: 0; }
   45% { left: calc(100% - 130px); }
   95% { left: 0; }
 }
 
-/* SHADOW SQUASH */
 @keyframes shadow-bob {
   0%, 100% {
     scale: 1;
@@ -336,16 +199,4 @@ header h1 {
     scale: 0.85;
     opacity: 0.08;
   }
-
-/* Force notebook links to use theme color */
-.notebook a {
-  color: #b04a6d !important;
-  text-decoration: none;
-  font-weight: 600;
 }
-
-.notebook a:hover {
-  text-decoration: underline;
-  }
-}
-
