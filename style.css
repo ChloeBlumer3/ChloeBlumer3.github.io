@@ -235,3 +235,73 @@ header h1 {
     opacity: 0.08;
   }
 }
+
+/* ============================= */
+/* 🩷 ARTICLE PAGE HERO SECTION */
+/* ============================= */
+
+.article-hero {
+  background: linear-gradient(135deg, #c05486, #e28fb0);
+  padding: 80px 40px 60px;
+  border-radius: 22px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.article-hero h1 {
+  color: #ffffff;
+  font-size: 2.8rem;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+.article-hero .byline {
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.article-hero .date {
+  color: #ffffff;
+  opacity: 0.95;
+  font-size: 0.95rem;
+}
+
+/* ============================= */
+/* ARTICLE CONTENT */
+/* ============================= */
+
+.article-content h2 {
+  font-size: 1.6rem;
+  margin-top: 40px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.article-content p {
+  line-height: 1.8;
+  margin-bottom: 18px;
+  font-size: 1.05rem;
+}
+
+/* ============================= */
+/* 🩷 RETURN BUTTON */
+/* ============================= */
+
+.return-button {
+  display: inline-block;
+  margin-top: 60px;
+  padding: 12px 28px;
+  background-color: #c05486;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.return-button:hover {
+  background-color: #a8476e;
+  transform: translateY(-2px);
+}
+
