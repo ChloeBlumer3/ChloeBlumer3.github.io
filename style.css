@@ -304,3 +304,14 @@ header h1 {
   background-color: #a8476e;
   transform: translateY(-2px);
 }
+/* HERO IMAGE FOR LIABILITY ARTICLE */
+
+.hero-image {
+  margin-top: 40px;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
