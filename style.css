@@ -315,3 +315,19 @@ header h1 {
   border-radius: 18px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
+/* SECTION DIVIDER */
+
+.article-content h2 {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.article-content h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #f3a0be;
+  margin-top: 10px;
+  border-radius: 2px;
+}
